@@ -8,7 +8,8 @@ class ItemsController < ApplicationController
     respond_to do |format|
       format.xlsx {
         response.headers[
-          'Content-Disposition'] = "attachment; filename='items.xlsx'"
+          'Content-Disposition'
+        ] = "attachment; filename='items.xlsx'"
       }
       format.html { render :index }
     end
